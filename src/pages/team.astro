@@ -1,0 +1,148 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Person from '~/components/widgets/Person.astro';
+
+const metadata = {
+  title: 'Our Team',
+};
+
+const teamMembers = [
+  {
+    name: 'Grant W. Mitchell',
+    title: 'MD, MBA - Co-Founder & CEO',
+    photoPath: 'https://everycure.org/wp-content/uploads/2022/09/IMG_4724-e1663358279754-410x410.jpg',
+    socialLinks: [
+      { href: 'https://www.linkedin.com/in/grantmitchellmd/', icon: 'tabler:brand-linkedin' },
+    ],
+  },
+  {
+    name: 'David Fajgenbaum',
+    title: 'MD, MBA, MSc - Co-Founder & President',
+    photoPath: 'https://everycure.org/wp-content/uploads/2019/08/image001-410x410.jpg',
+    socialLinks: [
+      { href: 'https://www.linkedin.com/in/davidfajgenbaum/', icon: 'tabler:brand-linkedin' },
+    ],
+  },
+  {
+    name: 'Tracey Sikora',
+    title: 'Co-Founder',
+    photoPath: 'https://everycure.org/wp-content/uploads/2022/09/IMG_5555-3-2-copy-410x410.jpg',
+    socialLinks: [
+      { href: 'https://www.linkedin.com/in/tracey-sikora/', icon: 'tabler:brand-linkedin' },
+    ],
+  },
+  {
+    name: 'Richard Riese',
+    title: 'MD, PhD - Chief Medical Officer',
+    photoPath: 'https://everycure.org/wp-content/uploads/2024/07/Dr._Richard_Reise.jpg',
+    socialLinks: [],
+  },
+  {
+    name: 'Mary Zuccato',
+    title: 'MBA - Chief Operating Officer',
+    photoPath: 'https://everycure.org/wp-content/uploads/2024/02/CrewNet-Headshot-Photov2-e1688254861669-820x840-2-e1707415648695-410x410.jpg',
+    socialLinks: [],
+  },
+  {
+    name: 'Charlie Hempstead',
+    title: 'MBA - VP of Platform',
+    photoPath: 'https://everycure.org/wp-content/uploads/2024/04/McKinsey-photo-2-410x410.jpg',
+    socialLinks: [],
+  },
+  {
+    name: 'Pascal Brokmeier',
+    title: 'M.Sc - Head of Engineering',
+    photoPath: 'https://everycure.org/wp-content/uploads/2024/06/portrait_pascal_4-2-410x410.jpg',
+    socialLinks: [],
+  },
+  {
+    name: 'Lee Lancashire',
+    title: 'PhD - Head of Data Science',
+    photoPath: 'https://everycure.org/wp-content/uploads/2024/07/T06CPFCU9HQ-U07AGJNF423-4bf6b262710d-512-410x410.jpeg',
+    socialLinks: [],
+  },
+  {
+    name: 'Jamie Babin',
+    title: 'MS - Director of External Affairs',
+    photoPath: 'https://everycure.org/wp-content/uploads/2024/06/Untitled-e1718901112824-410x410.png',
+    socialLinks: [],
+  },
+  {
+    name: 'Adam Green',
+    title: 'MEng, MBA - Chief of Staff',
+    photoPath: 'https://everycure.org/wp-content/uploads/2024/01/LC_FAM_3631-Copy-3-e1706715571258-410x410.jpg',
+    socialLinks: [],
+  },
+  {
+    name: 'Elliott Sharp',
+    title: 'MD - Tech Product Owner',
+    photoPath: 'https://everycure.org/wp-content/uploads/2024/06/Headshot-Elliott-Sharp-2-410x410.jpg',
+    socialLinks: [],
+  },
+  {
+    name: 'Vanessa Rostick',
+    title: 'Director of People Operations',
+    photoPath: 'https://everycure.org/wp-content/uploads/2024/04/DSC00204-2-410x410.jpg',
+    socialLinks: [],
+  },
+  {
+    name: 'Elizabeth Dale',
+    title: 'Ed.D - Senior Philanthropic Advisor',
+    photoPath: 'https://everycure.org/wp-content/uploads/2024/07/1666385595979.jpg',
+    socialLinks: [],
+  },
+  {
+    name: 'Brent Shaw',
+    title: 'Senior Communications Consultant',
+    photoPath: 'https://everycure.org/wp-content/uploads/2023/05/2A043C5E-7D57-48E8-927F-82302E929DBF-4-410x410.jpg',
+    socialLinks: [],
+  },
+  {
+    name: 'Alexei Stepanenko',
+    title: 'PhD - Data Scientist',
+    photoPath: 'https://everycure.org/wp-content/uploads/2024/04/1670782089753-410x410.jpg',
+    socialLinks: [],
+  },
+  {
+    name: 'Piotr Kaniewski',
+    title: 'Data Scientist',
+    photoPath: 'https://everycure.org/wp-content/uploads/2024/07/IMG_7868-410x410.jpg',
+    socialLinks: [],
+  },
+  {
+    name: 'Charlotte Blewitt',
+    title: 'Research Associate',
+    photoPath: 'https://everycure.org/wp-content/uploads/2024/05/headshot.jpg',
+    socialLinks: [],
+  },
+  {
+    name: 'Molly Ritze',
+    title: 'Executive Assistant',
+    photoPath: 'https://everycure.org/wp-content/uploads/2024/03/DSC00211-2-410x410.jpg',
+    socialLinks: [],
+  },
+];
+---
+
+<Layout metadata={metadata}>
+  <HeroText
+    title="Our Team"
+    subtitle="Meet the dedicated professionals working to unlock the hidden potential of existing drugs and save lives."
+  />
+
+  <section class="px-4 py-16 mx-auto max-w-6xl lg:py-20">
+    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      {teamMembers.map((member) => (
+        <div class="flex flex-col items-center">
+          <Person
+            name={member.name}
+            title={member.title}
+            photoPath={member.photoPath}
+            socialLinks={member.socialLinks}
+          />
+        </div>
+      ))}
+    </div>
+  </section>
+</Layout>

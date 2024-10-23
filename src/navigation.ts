@@ -3,7 +3,44 @@ import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 export const headerData = {
   links: [
     {
-      text: 'Homes',
+      text: 'Home',
+      href: getPermalink('/'),
+    },
+    {
+      text: 'About',
+      href: getPermalink('/about'),
+    },
+    {
+      text: 'Team',
+      href: getPermalink('/team'),
+    },
+    {
+      text: 'Blog',
+      links: [
+        {
+          text: 'Blog List',
+          href: getBlogPermalink(),
+        },
+        {
+          text: 'Article',
+          href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
+        },
+        {
+          text: 'Article (with MDX)',
+          href: getPermalink('markdown-elements-demo-post', 'post'),
+        },
+        {
+          text: 'Category Page',
+          href: getPermalink('tutorials', 'category'),
+        },
+        {
+          text: 'Tag Page',
+          href: getPermalink('astro', 'tag'),
+        },
+      ],
+    },
+    {
+      text: 'Examples',
       links: [
         {
           text: 'SaaS',
@@ -21,11 +58,6 @@ export const headerData = {
           text: 'Personal',
           href: getPermalink('/homes/personal'),
         },
-      ],
-    },
-    {
-      text: 'Pages',
-      links: [
         {
           text: 'Features (Anchor Link)',
           href: getPermalink('/#features'),
@@ -54,11 +86,6 @@ export const headerData = {
           text: 'Privacy policy',
           href: getPermalink('/privacy'),
         },
-      ],
-    },
-    {
-      text: 'Landing',
-      links: [
         {
           text: 'Lead Generation',
           href: getPermalink('/landing/lead-generation'),
@@ -84,36 +111,7 @@ export const headerData = {
           href: getPermalink('/landing/subscription'),
         },
       ],
-    },
-    {
-      text: 'Blog',
-      links: [
-        {
-          text: 'Blog List',
-          href: getBlogPermalink(),
-        },
-        {
-          text: 'Article',
-          href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
-        },
-        {
-          text: 'Article (with MDX)',
-          href: getPermalink('markdown-elements-demo-post', 'post'),
-        },
-        {
-          text: 'Category Page',
-          href: getPermalink('tutorials', 'category'),
-        },
-        {
-          text: 'Tag Page',
-          href: getPermalink('astro', 'tag'),
-        },
-      ],
-    },
-    {
-      text: 'Widgets',
-      href: '#',
-    },
+    }
   ],
   actions: [{ text: 'Download', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
 };

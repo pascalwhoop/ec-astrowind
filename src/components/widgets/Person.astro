@@ -1,0 +1,31 @@
+---
+import { Icon } from 'astro-icon/components';
+
+export interface Props {
+  photoPath: string;
+  socialLinks: Array<{ href: string; icon: string }>;
+  name: string;
+  title: string;
+}
+
+const { socialLinks = [], name = '', title = '', photoPath = '' } = Astro.props;
+---
+
+<div class="text-center">
+  <img
+    src={photoPath}
+    alt={name}
+    class="mx-auto rounded-full w-32 h-32 mb-4 object-cover"
+  />
+  <h3 class="text-xl font-semibold">{name}</h3>
+  <p class="text-gray-600 mb-2">{title}</p>
+  {socialLinks?.length ? (
+    <div class="flex justify-center space-x-2">
+      {socialLinks.map(({ href, icon }) => (
+        <a href={href} class="text-gray-400 hover:text-primary" target="_blank" rel="noopener noreferrer">
+          <Icon name={icon} class="w-5 h-5" />
+        </a>
+      ))}
+    </div>
+  ) : null}
+</div>

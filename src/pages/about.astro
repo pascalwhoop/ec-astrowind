@@ -7,7 +7,7 @@ import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
-  title: 'About us',
+  title: 'About Every Cure',
 };
 ---
 
@@ -15,61 +15,59 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-    tagline="About us"
+    tagline="About Every Cure"
     image={{
-      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Caos Image',
+      src: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Medical Research Image',
     }}
   >
     <Fragment slot="title">
-      Elevate your online presence with our <br />
-      <span class="text-accent dark:text-white highlight"> Beautiful Website Templates</span>
+      Unlocking the hidden potential of <br />
+      <span class="text-accent dark:text-white highlight">existing drugs to save lives</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Donec efficitur, ipsum quis congue luctus, mauris magna convallis mauris, eu auctor nisi lectus non augue. Donec
-      quis lorem non massa vulputate efficitur ac at turpis. Sed tincidunt ex a nunc convallis, et lobortis nisi tempus.
-      Suspendisse vitae nisi eget tortor luctus maximus sed non lectus.
+      Every Cure is a nonprofit initiative dedicated to repurposing existing medicines to treat diseases without approved treatments. By harnessing the power of AI and collaborative research, we aim to accelerate the discovery of new treatments and bring hope to millions of patients worldwide.
     </Fragment>
   </Hero>
 
   <!-- Stats Widget ****************** -->
 
   <Stats
-    title="Statistics about us"
+    title="Our Impact"
     stats={[
-      { title: 'Offices', amount: '4' },
-      { title: 'Employees', amount: '248' },
-      { title: 'Templates', amount: '12' },
-      { title: 'Awards', amount: '24' },
+      { title: 'Diseases without FDA-approved treatments', amount: '19,000+' },
+      { title: 'People affected globally', amount: '300M+' },
+      { title: 'Repurposed drugs advanced', amount: '28' },
+      { title: 'Lives improved', amount: '30-40K' },
     ]}
   />
 
   <!-- Features3 Widget ************** -->
 
   <Features3
-    title="Our templates"
-    subtitle="Etiam scelerisque, enim eget vestibulum luctus, nibh mauris blandit nulla, nec vestibulum risus justo ut enim. Praesent lacinia diam et ante imperdiet euismod."
+    title="Our Approach"
+    subtitle="Every Cure utilizes a systematic, disease-agnostic approach to drug repurposing, leveraging AI and collaborative research to unlock new treatments rapidly."
     columns={3}
     isBeforeContent={true}
     items={[
       {
-        title: 'Educational',
+        title: 'AI-Powered Identification',
         description:
-          'Morbi faucibus luctus quam, sit amet aliquet felis tempor id. Cras augue massa, ornare quis dignissim a, molestie vel nulla.',
-        icon: 'tabler:template',
+          'We use advanced artificial intelligence to analyze the worlds biomedical knowledge and identify FDA-approved drugs that can be repurposed for untreated conditions.',
+        icon: 'tabler:brain',
       },
       {
-        title: 'Interior Design',
+        title: 'Open-Source Database',
         description:
-          'Vivamus porttitor, tortor convallis aliquam pretium, turpis enim consectetur elit, vitae egestas purus erat ac nunc nulla.',
-        icon: 'tabler:template',
+          'Our comprehensive, open-source database integrates diverse datasets to facilitate transparency and collaboration within the scientific community.',
+        icon: 'tabler:database',
       },
       {
-        title: 'Photography',
+        title: 'High-Impact Focus',
         description:
-          'Duis sed lectus in nisl vehicula porttitor eget quis odio. Aliquam erat volutpat. Nulla eleifend nulla id sem fermentum.',
-        icon: 'tabler:template',
+          'We prioritize drug repurposing opportunities that can benefit neglected patient communities, ensuring our efforts address the most pressing needs.',
+        icon: 'tabler:target',
       },
     ]}
   />
@@ -81,68 +79,50 @@ const metadata = {
     isAfterContent={true}
     items={[
       {
-        title: 'E-commerce',
+        title: 'Rigorous Validation',
         description:
-          'Rutrum non odio at vehicula. Proin ipsum justo, dignissim in vehicula sit amet, dignissim id quam. Sed ac tincidunt sapien.',
-        icon: 'tabler:template',
+          'Promising opportunities are thoroughly validated through laboratory and clinical studies to confirm their efficacy and safety before advancing to broader applications.',
+        icon: 'tabler:test-pipe',
       },
       {
-        title: 'Blog',
+        title: 'Collaborative Research',
         description:
-          'Nullam efficitur volutpat sem sed fringilla. Suspendisse et enim eu orci volutpat laoreet ac vitae libero.',
-        icon: 'tabler:template',
+          'We partner with medical experts, physicians, drug companies, academics, and patient advocacy groups to accelerate the drug repurposing process.',
+        icon: 'tabler:users',
       },
       {
-        title: 'Business',
+        title: 'Equitable Access',
         description:
-          'Morbi et elit finibus, facilisis justo ut, pharetra ipsum. Donec efficitur, ipsum quis congue luctus, mauris magna.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Branding',
-        description:
-          'Suspendisse vitae nisi eget tortor luctus maximus sed non lectus. Cras malesuada pretium placerat. Nullam venenatis dolor a ante rhoncus.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Medical',
-        description:
-          'Vestibulum malesuada lacus id nibh posuere feugiat. Nam volutpat nulla a felis ultrices, id suscipit mauris congue. In hac habitasse platea dictumst.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Fashion Design',
-        description:
-          'Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus.',
-        icon: 'tabler:template',
+          'We are committed to ensuring that new cures are accessible to all patients, regardless of geographic or economic barriers.',
+        icon: 'tabler:world',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-      alt: 'Colorful Image',
+      src: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+      alt: 'Medical Research Team',
     }}
   />
 
   <!-- Steps2 Widget ****************** -->
 
   <Steps2
-    title="Our values"
-    subtitle="Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus. Nulla facilisi. Vestibulum malesuada lacus."
+    title="Our Values"
+    subtitle="At Every Cure, our values guide our mission to unlock the full potential of existing medicines and save lives."
     items={[
       {
-        title: 'Customer-centric approach',
+        title: 'Innovation',
         description:
-          'Donec id nibh neque. Quisque et fermentum tortor. Fusce vitae dolor a mauris dignissim commodo. Ut eleifend luctus condimentum.',
+          'We embrace cutting-edge technologies and novel approaches to accelerate drug repurposing and discovery.',
       },
       {
-        title: 'Constant Improvement',
+        title: 'Collaboration',
         description:
-          'Phasellus laoreet fermentum venenatis. Vivamus dapibus pulvinar arcu eget mattis. Fusce eget mauris leo.',
+          'We foster partnerships across disciplines and sectors to leverage collective expertise and resources.',
       },
       {
-        title: 'Ethical Practices',
+        title: 'Patient-Centric',
         description:
-          'Vestibulum imperdiet libero et lectus molestie, et maximus augue porta. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
+          'We prioritize the needs of patients, especially those with rare and neglected diseases, in all our efforts.',
       },
     ]}
   />
@@ -150,30 +130,30 @@ const metadata = {
   <!-- Steps2 Widget ****************** -->
 
   <Steps2
-    title="Achievements"
-    subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla, sed porttitor est nibh at nulla."
+    title="Our Achievements"
+    subtitle="Every Cure has made significant strides in advancing drug repurposing and improving patient lives."
     isReversed={true}
     callToAction={{
-      text: 'See more',
-      href: '/',
+      text: 'Learn More',
+      href: '/our-work',
     }}
     items={[
       {
-        title: 'Global reach',
-        description: 'Nam malesuada urna in enim imperdiet tincidunt. Phasellus non tincidunt nisi, at elementum mi.',
-        icon: 'tabler:globe',
+        title: 'AI-Driven Platform Development',
+        description: 'Received $48.3M from ARPA-H to develop an AI-driven platform for drug repurposing.',
+        icon: 'tabler:robot',
       },
       {
-        title: 'Positive customer feedback and reviews',
+        title: 'Life-Saving Discoveries',
         description:
-          'Cras semper nulla leo, eget laoreet erat cursus sed. Praesent faucibus massa in purus iaculis dictum.',
-        icon: 'tabler:message-star',
+          'Identified and advanced 28 repurposed drugs for multiple diseases, improving 30-40K lives globally.',
+        icon: 'tabler:heartbeat',
       },
       {
-        title: 'Awards and recognition as industry experts',
+        title: 'Collaborative Partnerships',
         description:
-          'Phasellus lacinia cursus velit, eu malesuada magna pretium eu. Etiam aliquet tellus purus, blandit lobortis ex rhoncus vitae.',
-        icon: 'tabler:award',
+          'Established partnerships with leading organizations in healthcare, technology, and philanthropy.',
+        icon: 'tabler:heartbeat',
       },
     ]}
   />
@@ -181,25 +161,21 @@ const metadata = {
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Our locations"
-    tagline="Find us"
-    columns={4}
+    title="Our Team"
+    tagline="Meet the Experts"
+    columns={3}
     items={[
       {
-        title: 'EE.UU',
-        description: '1234 Lorem Ipsum St, 12345, Miami',
+        title: 'Dr. David Fajgenbaum',
+        description: 'Co-Founder & President',
       },
       {
-        title: 'Spain',
-        description: '5678 Lorem Ipsum St, 56789, Madrid',
+        title: 'Dr. Grant Mitchell',
+        description: 'Co-Founder & CEO',
       },
       {
-        title: 'Australia',
-        description: '9012 Lorem Ipsum St, 90123, Sydney',
-      },
-      {
-        title: 'Brazil',
-        description: '3456 Lorem Ipsum St, 34567, São Paulo',
+        title: 'Tracey Sikora',
+        description: 'Co-Founder',
       },
     ]}
   />
@@ -207,21 +183,21 @@ const metadata = {
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Technical Support"
-    tagline="Contact us"
+    title="Get Involved"
+    tagline="Support Our Mission"
     columns={2}
     items={[
       {
-        title: 'Chat with us',
+        title: 'Donate',
         description:
-          'Integer luctus laoreet libero, auctor varius purus rutrum sit amet. Ut nec molestie nisi, quis eleifend mi.',
-        icon: 'tabler:messages',
+          'Your contribution helps fund our research and platform development to accelerate drug repurposing.',
+        icon: 'tabler:heart',
       },
       {
-        title: 'Call us',
+        title: 'Share Your Insights',
         description:
-          'Mauris faucibus finibus orci, in posuere elit viverra non. In hac habitasse platea dictumst. Cras lobortis metus a hendrerit congue.',
-        icon: 'tabler:headset',
+          'If you have experience with drug repurposing or off-label use, share your story to help advance our research.',
+        icon: 'tabler:bulb',
       },
     ]}
   />

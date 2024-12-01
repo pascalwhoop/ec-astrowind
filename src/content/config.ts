@@ -46,14 +46,17 @@ const metadataDefinition = () =>
     .optional();
 
 const postCollection = defineCollection({
-  schema: z.object({
+  schema: ({image}) => z.object({
     publishDate: z.date().optional(),
     updateDate: z.date().optional(),
     draft: z.boolean().optional(),
 
     title: z.string(),
     excerpt: z.string().optional(),
-    image: z.string().optional(),
+    image: image().refine((img) => img.width >= 1080, {
+      message: "Cover image must be at least 1080 pixels wide!",
+    }).optional(),
+    attribution: z.string().optional(),
 
     category: z.string().optional(),
     tags: z.array(z.string()).optional(),

@@ -1,9 +1,14 @@
 ---
 import { SITE } from 'astrowind:config';
+import {Image} from 'astro:assets';
+import ecLogo from '../assets/images/ec_4x.png';
+// import ecLogo from '../assets/images/ec_heart.png';
 ---
 
 <span
   class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white"
 >
-  🚀 {SITE?.name}
+
+  <Image src={ecLogo} alt="Every Cure Logo" height={50} />
+  <!-- {SITE?.name} -->
 </span>

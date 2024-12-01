@@ -1,181 +1,73 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-
 import Hero from '~/components/widgets/Hero.astro';
-import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
-import Features2 from '~/components/widgets/Features2.astro';
-import Steps from '~/components/widgets/Steps.astro';
-import Content from '~/components/widgets/Content.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
-import Stats from '~/components/widgets/Stats.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'Every Cure - Unlocking the Hidden Potential of Existing Drugs',
+  title: 'Every Cure Tech Blog',
   ignoreTitleTemplate: true,
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
-
+  <!-- Hero Widget -->
   <Hero
+    tagline="Every Cure Tech Blog"
     actions={[
       {
         variant: 'primary',
-        text: 'Explore Our Work',
-        href: 'https://google.com',
-        icon: 'tabler:telescope',
+        text: 'Read Latest Posts',
+        href: '#latest-posts',
       },
-      { text: 'Learn more', href: '#features' },
     ]}
-    image={{ src: 'https://everycure.org/wp-content/uploads/2024/01/gs-copy-1620x1363.jpg', alt: 'Every Cure Hero Image' }}
   >
     <Fragment slot="title">
-      Unlocking the hidden potential of <span class="text-accent dark:text-white highlight">existing drugs</span> to save lives
+      Welcome to the <span class="text-accent dark:text-white highlight">Every Cure</span> Tech Blog
     </Fragment>
 
     <Fragment slot="subtitle">
-      Every Cure is a nonprofit initiative dedicated to repurposing existing medicines to treat diseases without approved treatments. By harnessing the power of AI and collaborative research, we aim to accelerate the discovery of new treatments and bring hope to millions of patients worldwide.
+      Discover insights into our technology, engineering practices, and the technical challenges we're solving to help repurpose existing drugs for new diseases.
     </Fragment>
   </Hero>
 
-  <!-- Note Widget ******************* -->
-
-  <Note />
-
-  <!-- Features Widget *************** -->
-
+  <!-- Features Widget -->
   <Features
     id="features"
-    tagline="Our Approach"
-    title="How Every Cure Makes a Difference"
-    subtitle="We utilize a systematic, disease-agnostic approach to drug repurposing, leveraging AI and collaborative research to unlock new treatments rapidly."
+    tagline="What we write about"
+    title="Topics we cover"
     items={[
       {
-        title: 'AI-Powered Identification',
+        title: 'Drug Repurposing Technology',
         description:
-          'We use advanced artificial intelligence to analyze the world\'s biomedical knowledge and identify FDA-approved drugs that can be repurposed for untreated conditions.',
+          'Deep dives into our technological approach to identifying new uses for existing drugs.',
+        icon: 'tabler:flask',
+      },
+      {
+        title: 'Data Science & ML',
+        description:
+          'Exploring how we use data science and machine learning to analyze medical data and identify potential treatments.',
         icon: 'tabler:brain',
       },
       {
-        title: 'Open-Source Database',
+        title: 'Engineering Practices',
         description:
-          'Our comprehensive, open-source database integrates diverse datasets to facilitate transparency and collaboration within the scientific community.',
-        icon: 'tabler:database',
+          'Sharing our engineering best practices, tools, and methodologies that help us build reliable and scalable solutions.',
+        icon: 'tabler:code',
       },
       {
-        title: 'High-Impact Focus',
+        title: 'Technical Challenges',
         description:
-          'We prioritize drug repurposing opportunities that can benefit neglected patient communities, ensuring our efforts address the most pressing needs.',
-        icon: 'tabler:target',
-      },
-      {
-        title: 'Rigorous Validation',
-        description:
-          'Promising opportunities are thoroughly validated through laboratory and clinical studies to confirm their efficacy and safety before advancing to broader applications.',
-        icon: 'tabler:test-pipe',
-      },
-      {
-        title: 'Collaborative Research',
-        description:
-          'We partner with medical experts, physicians, drug companies, academics, and patient advocacy groups to accelerate the drug repurposing process.',
-        icon: 'tabler:users',
-      },
-      {
-        title: 'Equitable Access',
-        description:
-          'We are committed to ensuring that new cures are accessible to all patients, regardless of geographic or economic barriers.',
-        icon: 'tabler:world',
+          'Discussion of complex technical challenges we face and how we solve them.',
+        icon: 'tabler:puzzle',
       },
     ]}
   />
 
-  <!-- Content Widget **************** -->
-
-  <Content
-    isReversed
-    tagline="Our Impact"
-    title="Transforming Lives Through Drug Repurposing"
-    items={[
-      {
-        title: 'Diseases without FDA-approved treatments',
-        description: 'Over 19,000 diseases currently lack FDA-approved treatments.',
-      },
-      {
-        title: 'People affected globally',
-        description: 'More than 300 million people worldwide are affected by diseases without approved treatments.',
-      },
-      {
-        title: 'Repurposed drugs advanced',
-        description: 'We have successfully advanced 28 repurposed drugs for multiple diseases.',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Medical Research Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Making a Real Difference</h3>
-      Our work has already improved 30-40K lives globally, and we're just getting started.
-    </Fragment>
-  </Content>
-
-  <!-- Steps Widget ****************** -->
-
-  <Steps
-    title="Join us in our mission to find Every Cure"
-    items={[
-      {
-        title: 'Step 1: <span class="font-medium">Donate</span>',
-        description:
-          'Your contribution helps fund our research and platform development to accelerate drug repurposing.',
-        icon: 'tabler:heart',
-      },
-      {
-        title: 'Step 2: <span class="font-medium">Share Your Insights</span>',
-        description:
-          'If you have experience with drug repurposing or off-label use, share your story to help advance our research.',
-        icon: 'tabler:bulb',
-      },
-      {
-        title: 'Step 3: <span class="font-medium">Spread the Word</span>',
-        description:
-          'Help us raise awareness about the potential of drug repurposing by sharing our mission with your network.',
-        icon: 'tabler:share',
-      },
-      {
-        title: 'Together, we can save lives!',
-        icon: 'tabler:check',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-      alt: 'Medical Research Team',
-    }}
+  <!-- Latest Posts Widget -->
+  <BlogLatestPosts
+    id="latest-posts"
+    title="Latest Blog Posts"
+    information={`Explore our latest technical articles and insights.`}
   />
-
-  <!-- CallToAction Widget *********** -->
-
-  <CallToAction
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Donate Now',
-        href: '/donate',
-        icon: 'tabler:heart',
-      },
-    ]}
-  >
-    <Fragment slot="title">
-      Help Us Find <br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Every Cure</span>
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      Your support can help us unlock new treatments and save lives. Join us in our mission to repurpose existing drugs and bring hope to millions of patients worldwide.
-    </Fragment>
-  </CallToAction>
 </Layout>
